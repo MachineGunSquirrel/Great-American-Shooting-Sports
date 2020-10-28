@@ -5,13 +5,37 @@
 
 html,
 body{
-  height:auto;
+  height:100%;
   background-color: #ffffff;
 }
 
-navbar h1{
-  background-image: url("..\Images/flag-background.jpg");
-  text-align: center;
+.page-grid{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr auto;
+}
+
+.navbar-grid{
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 250px auto max-content max-content; 
+  grid-template-rows: auto;
+  background-image: url('../Images/flag-background.jpg');
+  background-size: 100vw;
+  position: sticky;
+  top:0;
+}
+
+.navbar-grid > h1{
+  grid-column: 2;
+  text-align: center; 
+  color:#ffffff; 
+  font-weight: bold; 
+  font-size: 46px; 
+  margin-top: 0px; 
+  margin-bottom: 15px;
+  padding-top: 15px;
 }
 
 .btn-book{
@@ -25,58 +49,132 @@ navbar h1{
   border: none;
 }
 
-.product-card-one,
-.product-card-two,
-.product-card-three{
+.btn-book:hover{
+  background-color:black;
+  color: #b88484;
+  float: left;
+  margin: auto;
+  margin-left: 10%;
+  padding: 7px 45px 7px 45px;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-cart{
+  float: right;
+  margin: auto;
+  margin-right: 10%;
+  padding: 7px 45px 7px 45px;
+}
+
+.btn-cart:hover{
+  float: right;
+  margin: auto;
+  margin-right: 10%;
+  padding: 7px 45px 7px 45px;
+}
+
+.info-grid{
+  grid-row: 2;
+  display: grid;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.trending-container-grid{
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 38% 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  border-bottom: 1px solid gray;
+}
+
+.trending-container-grid > h2{
+  grid-column: 1;
+  margin: auto;
+  padding: 17%;
+  border-right: 1px solid gray;
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.trending-container-grid > img{
+  height: 170px;
+  margin: auto;
+}
+
+.product-card-one-grid,
+.product-card-two-grid,
+.product-card-three-grid{
+  grid-row: 1;
+  grid-template-columns: 50px 164px auto 40px;
   width: 290px;
   height: 320px;
   box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.45);
+  background-color: #310505;
 }
-.product-card-one{
-  background-color: #5DE1D9;
+.product-card-one-grid{
+  grid-column: 2;
 }
-.product-card-two{
-  background-color: green;
+.product-card-two-grid{
+  grid-column: 3;
 }
-.product-card-three{
-  background-color: blue;
+.product-card-three-grid{
+  grid-column: 4;
 }
 
 .product-header-text{
-  background-color: #8B8686;
-  color: #3B3A6D;
+  background-color: #2b2b2b;
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
   font-size: 20px;
 }
 
-.product-card-one > img,
-.product-card-two > img,
-.product-card-three > img{
+.product-description-text{
+  font-size: 14px;
+  color: white
+}
+
+.product-card-one-grid > img,
+.product-card-two-grid > img,
+.product-card-three-grid > img{
+  max-width: 280px;
+  object-fit: cover;
   height: 170px;
   margin: auto;
 }
 
-.product-card-one > button,
-.product-card-two > button,
-.product-card-three > button{
+.product-card-one-grid > button,
+.product-card-two-grid > button,
+.product-card-three-grid > button{
 font-size: 14px;
 }
 
-.product-card-one > button > span,
-.product-card-two > button > span,
-.product-card-three > button > span{
+.product-card-one-grid > button > span,
+.product-card-two-grid > button > span,
+.product-card-three-grid > button > span{
 font-size: 12px;
 }
 
-.page-footer{
-  background-color: #5DE1D9;
-  height: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+.page-footer-grid{
+  grid-row: 5;
+  background-image: url('../Images/flag-background.jpg');
+  background-size: 100vw;
+  height: 100px;
 }
+
 .btn-contact-us{
-  background-color: #3B3A6D;
+  background-color: #500b0b;
+  color: #ffffff;
+  float: left;
   margin: auto;
-  padding: 10px 50px 10px 50px;
+  margin-top: 15px; 
+  margin-bottom: 15px;
+  margin-left: 10%;
+  padding: 7px 45px 7px 45px;
+  font-weight: bold;
+  border: none;
 }

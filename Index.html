@@ -26,89 +26,102 @@
   </style>
   
 </head>
+
 <body>
-<!-- Nav Bar -->
-  <div class='navbar'
-        style="background-image: url('./Public/Images/flag-background.jpg');
-                position: sticky;
-               top:0;">
+<div class='page-grid'>
+  <!-- Nav Bar -->
+    <div class='navbar-grid'>
 
-    <button class='btn-book btn-primary'>Bound Book</button>
+      <button class='btn-book btn-primary'
+              style='grid-column: 1;'>Bound Book
+      </button>
 
-    <h1 style='text-align: center; 
-                            color:#575757; 
-                            font-weight: bold; 
-                            font-size: 46px; 
-                            margin-top: 0px; 
-                            margin-bottom: 15px;
-                            padding-top: 15px;'>
-                          Great American Shooting Sports</h1>
+      <h1>Great American Shooting Sports</h1>
 
-    <button class='btn-book btn-primary'>Shop</button>
+      <button class='btn-book btn-primary'
+              style='grid-column: 3;'>Shop
+      </button>
 
-    <button><img src="Public\Images\shopping-cart.png" alt=""></button>
+      <button class='btn-cart btn-outline-dark'
+              style='grid-column: 4;
+                    margin-top: 15px;
+                    margin-right: 15px;'>
+        <img src="Public\Images\shopping-cart.png" alt=""
+            style='max-height: 35px;
+                    max-width: 35px;'>
+      </button>
 
-    <br>
-  </div>
-<!-- Nav Bar -->
+      <br>
+    </div>
+  <!-- Nav Bar -->
 
-<!-- Welcome Message -->
-  <div>
+  <!-- Welcome Message -->
+    <div class='info-grid'>
 
-    <p>Welcome to Great American Shooting Sports! Here you can buy gats and edit the Bound Book.</p>
+      <p>Welcome to Great American Shooting Sports! 
+        Here you can buy gats and edit the Bound Book.
+      </p>
 
-  </div>
+    </div>
 
-<!-- Products -->
-  <h2>Trending Products</h2>
-    <!-- Card Container -->
-      <div>
+  <!-- Products -->
+    <div class='trending-container-grid'>
+      <h2>Trending Products</h2>
+        <!-- Card Container -->
 
-        <!-- Product 1 -->
-          <div>
-            <p>AR(Assault Rifle)-15</p>
+            <!-- Product 1 -->
+              <div class='product-card-one-grid'>
+                <h3 class='product-header-text'>
+                  AR(Assault Rifle)-15
+                </h3>
 
-            <img src="Public\Images\Products\5a0379d835876eaa008b4ca9.jpg">
+                <img src="Public\Images\Products\5a0379d835876eaa008b4ca9.jpg">
+                
+                <p class='product-description-text'>
+                  For lumber work and target practice.
+                </p>
+
+                <button class='btn btn-success'>
+                  Add To Cart | $694.99
+                </button>
+
+              </div>
+
+            <!-- Product 2 -->
+              <div class='product-card-two-grid'>
+                <h3 class='product-header-text'>Gat 1</h3>
+
+                <img src="Public\Images\Products\gat.png">
+
+                <p class='product-description-text'>Small and concealable for a pleasant range experience.</p>
+
+                <button class='btn btn-success'>Add To Cart | $214.99</button>
+
+              </div>
+
+            <!-- Product 3 -->
+              <div class='product-card-three-grid'>
+
+                <h3 class='product-header-text'>Flintlock</h3>
+
+                <img src="Public\Images\Products\gat2.png">
+
+                <p class='product-description-text'>Just as the Founding Fathers intended.</p>
+
+                <button class='btn btn-success'>Add To Cart | $1119.99</button>
+
+              </div>
             
-            <p>For lumber work and target practice.</p>
 
-            <button>Add To Cart | $694.99</button>
+        
+    </div>
 
-            <br>
-          </div>
+  <!-- Footer -->
+    <div class='page-footer-grid'>
 
-        <!-- Product 2 -->
-          <div>
-            <p>Gat 1</p>
+      <button class='btn-contact-us btn-primary'>Contact Us</button>
 
-            <img src="Public\Images\Products\gat.png">
-
-            <p>Small and concealable for a pleasant range experience.</p>
-
-            <button>Add To Cart | $214.99</button>
-
-            <br>
-          </div>
-
-        <!-- Product 3 -->
-          <div>
-
-            <p>Flintlock</p>
-
-            <img src="Public\Images\Products\gat2.png">
-
-            <p>Just as the Founding Fathers intended.</p>
-
-            <button>Add To Cart | $1119.99</button>
-
-            <br>
-          </div>
-      </div><hr>
-
-<!-- Footer -->
-  <hr>
-  <div>
-  <button>Contact Us</button>
+    </div>
 </div>
 </body>
 
