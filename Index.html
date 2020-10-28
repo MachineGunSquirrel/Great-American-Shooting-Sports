@@ -6,55 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- meta tags -->
   <title>Document</title>
+
+  <!-- Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href='./Public/Styles/custom-styles.css'>
+
+  <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <style>
+    *{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+      margin:0;
+    }
+  </style>
+  
 </head>
 <body>
 <!-- Nav Bar -->
-  <div>
-    <button>Bound Book</button>
-    <center><h1>Great American Shooting Sports</h1></center>
-    <button>Shop</button>
-    <button><img src="Public\Images\shopping-cart.png" alt=""></button>
-    <hr>
+  <div class='navbar'>
+
+    <button class='btn-book btn-primary'>Bound Book</button>
+
+    <h1 style='text-align: center; 
+                            color:#ffffff; 
+                            font-weight: bold; 
+                            font-size: 46px; 
+                            margin-top: 0px; 
+                            margin-bottom: 15px;
+                            padding-top: 15px;'>
+                          Great American Shooting Sports</h1>
+
+    <button class='btn-book btn-primary'>Shop</button>
+
+    <button class='btn-book btn-primary'><img src="Public\Images\shopping-cart.png" alt=""></button>
+
+    <br>
   </div>
 <!-- Nav Bar -->
 
 <!-- Welcome Message -->
   <div>
+
     <p>Welcome to Great American Shooting Sports! Here you can buy gats and edit the Bound Book.</p>
+
+    <br>
+
   </div>
 
 <!-- Products -->
   <h2>Trending Products</h2>
     <!-- Card Container -->
       <div>
+
         <!-- Product 1 -->
-          <div>
-            <p>AR(Assault Rifle)-15</p>
-            <img src="Public\Images\5a0379d835876eaa008b4ca9.jpg">
-            <p>For lumber work and target practice.</p>
-            <button>Add To Cart | $694.99</button>
-          </div><br>
+          <div class='product-card-one'>
+            <h3 class='product-header-text'>AR(Assault Rifle)-15</h3>
+
+            <img src="Public\Images\Products\5a0379d835876eaa008b4ca9.jpg">
+            
+            <p class='product-description-text'>For lumber work and target practice.</p>
+
+            <button class='btn btn-success'>Add To Cart | $694.99</button>
+
+          </div>
+          <br>
+
         <!-- Product 2 -->
-          <div>
-            <p>Gat 1</p>
-            <img src="Public\Images\gat.png">
-            <p>Small and concealable for a pleasant range experience.</p>
-            <button>Add To Cart | $214.99</button>
-          </div><br>
+          <div class='product-card-two'>
+            <h3 class='product-header-text'>Gat 1</h3>
+
+            <img src="Public\Images\Products\gat.png">
+
+            <p class='product-description-text'>Small and concealable for a pleasant range experience.</p>
+
+            <button class='btn btn-success'>Add To Cart | $214.99</button>
+
+          </div>
+          <br>
+
         <!-- Product 3 -->
-          <div>
-            <p>Flintlock</p>
-            <img src="Public\Images\gat2.png">
-            <p>Just as the Founding Fathers intended.</p>
-            <button>Add To Cart | $1119.99</button>
-          </div><br>
+          <div class='product-card-three'>
+
+            <h3 class='product-header-text'>Flintlock</h3>
+
+            <img src="Public\Images\Products\gat2.png">
+
+            <p class='product-description-text'>Just as the Founding Fathers intended.</p>
+
+            <button class='btn btn-success'>Add To Cart | $1119.99</button>
+
+          </div>
+          <br>
+
       </div><hr>
 
 <!-- Footer -->
-  <hr>
-  <div>
-  <button>Contact Us</button>
-</div>
+
+  <div class='page-footer'>
+
+    <button class='btn-contact-us btn-primary'>Contact Us</button>
+
+  </div>
 </body>
 
 </html>
