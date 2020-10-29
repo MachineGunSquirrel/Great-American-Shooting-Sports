@@ -49,29 +49,22 @@ body{
   border: none;
 }
 
-.btn-book:hover{
-  background-color:black;
-  color: #b88484;
-  float: left;
-  margin: auto;
-  margin-left: 10%;
-  padding: 7px 45px 7px 45px;
-  font-weight: bold;
+.btn {
+  background-color: #500b0b;
   border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.btn:hover{
+  background-color: #dda1a1
 }
 
 .btn-cart{
-  float: right;
-  margin: auto;
-  margin-right: 10%;
-  padding: 7px 45px 7px 45px;
-}
-
-.btn-cart:hover{
-  float: right;
-  margin: auto;
-  margin-right: 10%;
-  padding: 7px 45px 7px 45px;
+  height: 40px;
+  width: 40px;
 }
 
 .info-grid{
@@ -109,12 +102,17 @@ body{
 .product-card-two-grid,
 .product-card-three-grid{
   grid-row: 1;
-  grid-template-columns: 50px 164px auto 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 164px auto 40px;
   width: 290px;
   height: 320px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.45);
   background-color: #310505;
 }
+
 .product-card-one-grid{
   grid-column: 2;
 }
@@ -125,7 +123,21 @@ body{
   grid-column: 4;
 }
 
+.product-card-one-grid > button,
+.product-card-two-grid > button,
+.product-card-three-grid > button{
+font-size: 14px;
+}
+
+.product-card-one-grid > button > span,
+.product-card-two-grid > button > span,
+.product-card-three-grid > button > span{
+font-size: 12px;
+}
+
+
 .product-header-text{
+  grid-row: 1;
   background-color: #2b2b2b;
   color: #ffffff;
   font-weight: bold;
@@ -134,6 +146,8 @@ body{
 }
 
 .product-description-text{
+  margin: auto;
+  padding: 10px;
   font-size: 14px;
   color: white
 }
@@ -160,20 +174,17 @@ font-size: 12px;
 }
 
 .page-footer-grid{
+  display: grid;
   grid-row: 5;
   background-image: url('../Images/flag-background.jpg');
   background-size: 100vw;
-  height: 100px;
+  height: 75px;
 }
 
 .btn-contact-us{
   background-color: #500b0b;
   color: #ffffff;
-  float: left;
-  margin: auto;
-  margin-top: 15px; 
-  margin-bottom: 15px;
-  margin-left: 10%;
+  margin: auto auto 15px auto;
   padding: 7px 45px 7px 45px;
   font-weight: bold;
   border: none;

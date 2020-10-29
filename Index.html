@@ -10,6 +10,8 @@
   <!-- Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href='./Public/Styles/custom-styles.css'>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -32,23 +34,26 @@
   <!-- Nav Bar -->
     <div class='navbar-grid'>
 
-      <button class='btn-book btn-primary'
+      <button class='btn btn-book'
               style='grid-column: 1;'>Bound Book
       </button>
 
       <h1>Great American Shooting Sports</h1>
 
-      <button class='btn-book btn-primary'
-              style='grid-column: 3;'>Shop
+      <button class='btn btn-book'
+              style='grid-column: 3;
+                     margin-right: 15px;'>
+        Shop
       </button>
 
-      <button class='btn-cart btn-outline-dark'
+      <button class='btn btn-cart'
               style='grid-column: 4;
-                    margin-top: 15px;
-                    margin-right: 15px;'>
-        <img src="Public\Images\shopping-cart.png" alt=""
+                    margin: auto 15px auto auto;'>
+        <i class='fa fa-shopping-cart'></i>
+
+        <!-- <img src="Public\Images\shopping-cart.png" alt=""
             style='max-height: 35px;
-                    max-width: 35px;'>
+                    max-width: 35px;'> -->
       </button>
 
       <br>
@@ -82,33 +87,45 @@
                 </p>
 
                 <button class='btn btn-success'>
-                  Add To Cart | $694.99
+                  Add To Cart | <span>$694.99</span>
                 </button>
 
               </div>
 
             <!-- Product 2 -->
               <div class='product-card-two-grid'>
-                <h3 class='product-header-text'>Gat 1</h3>
+                <h3 class='product-header-text'>
+                  Gat 1
+                </h3>
 
                 <img src="Public\Images\Products\gat.png">
 
-                <p class='product-description-text'>Small and concealable for a pleasant range experience.</p>
+                <p class='product-description-text'>
+                  Small and concealable for a pleasant range experience.
+                </p>
 
-                <button class='btn btn-success'>Add To Cart | $214.99</button>
+                <button class='btn btn-success'>
+                  Add To Cart | <span>$214.99</span>
+                </button>
 
               </div>
 
             <!-- Product 3 -->
               <div class='product-card-three-grid'>
 
-                <h3 class='product-header-text'>Flintlock</h3>
+                <h3 class='product-header-text'>
+                  Flintlock
+                </h3>
 
                 <img src="Public\Images\Products\gat2.png">
 
-                <p class='product-description-text'>Just as the Founding Fathers intended.</p>
+                <p class='product-description-text'>
+                  Just as the Founding Fathers intended.
+                </p>
 
-                <button class='btn btn-success'>Add To Cart | $1119.99</button>
+                <button class='btn btn-success'>
+                  Add To Cart | <span>$1119.99</span>
+                </button>
 
               </div>
             
@@ -119,7 +136,9 @@
   <!-- Footer -->
     <div class='page-footer-grid'>
 
-      <button class='btn-contact-us btn-primary'>Contact Us</button>
+      <button class='btn btn-contact-us'>
+        Contact Us
+      </button>
 
     </div>
 </div>
