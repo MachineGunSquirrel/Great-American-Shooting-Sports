@@ -102,9 +102,7 @@ body{
   margin: auto;
 }
 
-.product-card-one-grid,
-.product-card-two-grid,
-.product-card-three-grid{
+.product-card-grid{
   grid-row: 1;
   display: grid;
   grid-template-columns: 1fr;
@@ -118,25 +116,11 @@ body{
   background-color: #310505;
 }
 
-.product-card-one-grid{
-  grid-column: 2;
-}
-.product-card-two-grid{
-  grid-column: 3;
-}
-.product-card-three-grid{
-  grid-column: 4;
-}
-
-.product-card-one-grid > button,
-.product-card-two-grid > button,
-.product-card-three-grid > button{
+.product-card-grid > button{
 font-size: 14px;
 }
 
-.product-card-one-grid > button > span,
-.product-card-two-grid > button > span,
-.product-card-three-grid > button > span{
+.product-card-grid > button > span{
 font-size: 12px;
 }
 
@@ -156,24 +140,18 @@ font-size: 12px;
   color: white
 }
 
-.product-card-one-grid > img,
-.product-card-two-grid > img,
-.product-card-three-grid > img{
+.product-card-grid > img{
   max-width: 280px;
   object-fit: cover;
   height: 170px;
   margin: auto;
 }
 
-.product-card-one-grid > button,
-.product-card-two-grid > button,
-.product-card-three-grid > button{
+.product-card-grid > button{
 font-size: 14px;
 }
 
-.product-card-one-grid > button > span,
-.product-card-two-grid > button > span,
-.product-card-three-grid > button > span{
+.product-card-grid > button > span{
 font-size: 12px;
 }
 
