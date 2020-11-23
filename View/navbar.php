@@ -3,7 +3,7 @@
 
 <button class='btn btn-book'
         style='grid-column: 1;'
-        onclick="document.location='./bound-book-form.html'">
+        onclick="document.location='./bound-book-form.php'">
   Bound Book
 </button>
 
@@ -14,7 +14,8 @@
 <button class='btn btn-book'
         style='grid-column: 3;
                margin-right: 15px;
-               float: right;'>
+               float: right;'
+        onclick="document.location='./Index.php'">
   Shop
 </button>
 
