@@ -25,6 +25,7 @@ body{
   background-size: 100vw;
   position: sticky;
   top:0;
+  z-index: 9999;
 }
 
 .navbar-heading{
@@ -78,6 +79,10 @@ body{
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid gray;
+  background-image: url('../Images/Info-background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
 }
 
 .trending-container-grid{
@@ -88,13 +93,13 @@ body{
   border-bottom: 1px solid gray;
 }
 
-.trending-container-grid > h2{
+.trending-container-grid > button{
   grid-column: 1;
   margin: auto;
-  padding: 17%;
+  /* padding: 17%;
   border-right: 1px solid gray;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 36px; */
 }
 
 .trending-container-grid > img{
@@ -153,6 +158,48 @@ font-size: 14px;
 
 .product-card-grid > button > span{
 font-size: 12px;
+}
+
+.product-type-list{
+  grid-row: 4;
+  grid-template-columns: 10% 10% 1fr 10% 10%;
+  grid-template-rows: auto auto auto;
+  display: grid;
+}
+
+.product-type-card{
+  border: 1px solid slategray;
+  margin: 20px 50px 20px 50px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.product-type-card:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+
+.product-type-card > h2{
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px black;
+  font-weight: bold;
+  font-size: 72px;
+}
+.product-type-card:nth-child(odd){
+  -webkit-animation: 2s ease-out 0s 1 slideInFromRight;
+          animation: 2s ease-out 0s 1 slideInFromRight;
+  grid-column: 2 / span 2;
+}
+
+.product-type-card:nth-child(even){
+  -webkit-animation: 2s ease-out 0s 1 slideInFromLeft;
+          animation: 2s ease-out 0s 1 slideInFromLeft;
+  grid-column: 3 / span 2;
 }
 
 .form-page{

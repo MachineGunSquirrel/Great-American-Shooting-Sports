@@ -18,7 +18,7 @@
 
   <!-- Products -->
     <div class='trending-container-grid'>
-      <h2>Trending Products</h2>
+      <button class='btn btn-primary'>Shop All</button>
         <!-- Card Container -->
 
           <?php
@@ -36,6 +36,29 @@
               ?>            
 
         
+    </div>
+
+  <!-- Product Type List -->
+    <div class='product-type-list'>
+
+      <!-- Product Type Card -->
+      <div class='product-type-card' style="grid-row: 1;
+                                              background-image: url('./View/Public/Images/product-types/rifle-glamor.jpg'); 
+                                              background-size: cover">
+          <h2>Rifles</h2>
+        </div>
+        <div class='product-type-card' style="grid-row: 2;
+                                              background-image: url('./View/Public/Images/product-types/handgun-glamor.jpg'); 
+                                              background-size: cover">
+          <h2>Handguns</h2>
+        </div>
+        <div class='product-type-card' style="grid-row: 3;
+                                              background-image: url('./View/Public/Images/product-types/plate-carrier-glamor.jpg'); 
+                                              background-size: cover">
+          <h2>Plate Carriers</h2>
+        </div>
+
+
     </div>
 
 <?php
