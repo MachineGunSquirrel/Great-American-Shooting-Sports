@@ -5,6 +5,16 @@
   Contact Us
 </button>
 
+<?php
+  $database = new Database();
+  $db = $database->connect();
+
+  $product = new Customer($db);
+
+  // $productGet = $product->pizzaRead();
+?>
+
+
 <!-- The Modal -->
   <div id="myModal" class="modal">
 
@@ -49,6 +59,8 @@
                                          document.getElementById('zipCode').value, 
                                          document.getElementById('phoneNumber').value)">
           Submit</button>
+        
+        <div class='message-return'></div>
 
       </div>
 

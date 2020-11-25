@@ -1,7 +1,26 @@
 <?php
 
+    session_start();
+    // if(!isset($_SESSION['sessionValid'])){
+    //     echo"
+    //     <script>alert('session failed');</script>";
+    //     header('Location: ./index.php');
+    // }
+
     include './View/header.php';
     include './View/navbar.php';
+    include './Controller/db_conn.php';
+    include './Controller/ajax-calls.php';
+    include './Model/query-customer.php';
+
+    $database = new Database();
+    $db = $database->connect();
+
+    $product = new Customer($db);
+
+    // $productGet = $product->pizzaRead();
+
+    include './Controller/form-submit.php';
 
 ?>
 

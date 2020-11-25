@@ -6,7 +6,7 @@
 ?>
 
   <!-- Bound Book Input Form -->
-      <form  class='form-bound-book' action="">
+      <!-- <form  class='form-bound-book' action="">
 
         <label>Manufacturer</label>
         <input type='text' 
@@ -89,8 +89,26 @@
 
         <input type='submit' class='btn btn-submit' value="Submit">
 
-      </form>
+      </form> -->
   <!-- Bound Book Input Form -->
+
+  <!-- Bound Book Table -->
+    <?php
+      while($row = $productGet->fetch(PDO::FETCH_ASSOC)){
+          //variables
+              $firstName = $row['FirstName'];
+              $slices = $row['slices_eaten'];
+              $comment = $row['comments'];
+              if(is_null($comment) == false){
+                  $comment = "\"".$comment."\"";  
+              }
+          //variables 
+
+          makeRow($name, $slices, $comment, $colNum);
+          $colNum++;
+      }
+    ?>
+
 
 
 <!-- </div> -->
