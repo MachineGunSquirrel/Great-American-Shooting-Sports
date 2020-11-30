@@ -18,10 +18,6 @@
 
     $product = new Customer($db);
 
-    // $productGet = $product->pizzaRead();
-
-    include './Controller/form-submit.php';
-
 ?>
 
 

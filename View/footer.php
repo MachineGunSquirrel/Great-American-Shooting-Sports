@@ -1,17 +1,21 @@
   <!-- Footer -->
   <div class='page-footer-grid'>
 
-<button id='modal' class='btn btn-contact-us'>
-  Contact Us
-</button>
-
 <?php
+  $uri = $_SERVER['REQUEST_URI'];
+  if($uri = '/FIT-Web-Course/Project/Great-American-Shooting-Sports/Index.php'){
+    echo("
+      <button id='modal' class='btn btn-contact-us'>
+        Contact Us
+      </button>
+  ");
+  }
+
   $database = new Database();
   $db = $database->connect();
 
   $product = new Customer($db);
 
-  // $productGet = $product->pizzaRead();
 ?>
 
 
@@ -53,14 +57,14 @@
                   onclick="ajaxAddPerson(document.getElementById('firstName').value, 
                                          document.getElementById('lastName').value,  
                                          document.getElementById('addressLine1').value, 
-                                         document.getElementById('addressLine2').value
+                                         document.getElementById('addressLine2').value,
                                          document.getElementById('city').value, 
                                          document.getElementById('state').value, 
                                          document.getElementById('zipCode').value, 
                                          document.getElementById('phoneNumber').value)">
           Submit</button>
         
-        <div class='message-return'></div>
+        <div id='message-return'></div>
 
       </div>
 

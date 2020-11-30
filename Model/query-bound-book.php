@@ -5,9 +5,9 @@ class Gat {
     $this->conn = $db;
   }
 
-  function pizzaRead(){
+  function gatRead(){
     //select all firearms from db
-    $query = "SELECT * FROM firearms";
+    $query = "SELECT * FROM Firearms_Information";
     //prepare query statement
     $stmt = $this->conn->prepare($query);
     //execute query

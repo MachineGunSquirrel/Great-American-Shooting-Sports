@@ -2,6 +2,8 @@
 
     include './View/header.php';
     include './View/navbar.php';
+    include './Controller/db_conn.php';
+    include './Model/query-bound-book.php';
 
 ?>
 
@@ -93,22 +95,54 @@
   <!-- Bound Book Input Form -->
 
   <!-- Bound Book Table -->
-    <?php
-      while($row = $productGet->fetch(PDO::FETCH_ASSOC)){
+    <table style='table'>
+      <tr>
+        <th>Manufacturer</th>
+        <th>Importer</th>
+        <th>Model</th>
+        <th>Caliber</th>
+        <th>Action</th>
+        <th>Type</th>
+        <th>SerialNumber</th>
+      </tr>
+
+      <?php
+        $database = new Database();
+        $db = $database->connect();
+
+        $product = new Gat($db);
+        $productGet = $product->gatRead();
+        while($row = $productGet->fetch(PDO::FETCH_ASSOC)){
           //variables
-              $firstName = $row['FirstName'];
-              $slices = $row['slices_eaten'];
-              $comment = $row['comments'];
-              if(is_null($comment) == false){
-                  $comment = "\"".$comment."\"";  
-              }
+              $Manufacturer = $row['Manufacturer'];
+              $Importer = $row['Importer'];
+              $Model = $row['Model'];
+              $Caliber = $row['Caliber'];
+              $Action = $row['Action'];
+              $Type = $row['Type'];
+              $SerialNumber = $row['SerialNumber'];
           //variables 
 
-          makeRow($name, $slices, $comment, $colNum);
-          $colNum++;
-      }
-    ?>
+          makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber);
+        }
 
+        //print each row in view
+        function makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber){
+          echo "
+            <tr>
+              <td>{$Manufacturer}</td>
+              <td>{$Importer}</td>
+              <td>{$Model}</td>
+              <td>{$Caliber}</td>
+              <td>{$Action}</td>
+              <td>{$Type}</td>
+              <td>{$SerialNumber}</td>
+            </tr>
+          ";
+        }
+      
+      ?>
+    </table>
 
 
 <!-- </div> -->
