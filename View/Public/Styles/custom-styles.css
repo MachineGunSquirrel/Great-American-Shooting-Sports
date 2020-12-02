@@ -33,7 +33,7 @@ body{
   backdrop-filter: blur(5px);
 }
 
-.navbar-heading > h1{
+.navbar-heading > h1, span{
   text-align: center; 
   color:#ffffff; 
   font-weight: bold; 
@@ -286,4 +286,53 @@ font-size: 12px;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1500px) {
+  div.trending-container-grid {
+    grid-template-columns: .25fr 1fr 1fr 1fr;
+  }
+  div.trending-container-grid button{
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  div.navbar-heading span{
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  div.trending-container-grid{
+    grid-template-columns: 1fr;
+    min-height: 75px;
+  }
+  div.trending-container-grid button{
+    display: block;
+  }
+  div.product-card-grid{
+    display: none;
+  }
+  div.product-type-card > h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+  }  
+  div.page-grid{
+    grid-template-rows: auto auto 1fr auto auto;
+  }
+}
+@media only screen and (max-width: 554px) {
+  button.btn-book{
+    margin-left: 5%;
+    padding: 7px 15px 7px 15px;
+  }
+  div.navbar-grid{
+    grid-template-columns: 150px auto max-content max-content;
+  }
+  div.product-type-card > h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
 }

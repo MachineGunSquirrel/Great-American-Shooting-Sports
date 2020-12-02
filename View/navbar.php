@@ -8,7 +8,7 @@
 </button>
 
   <div class='navbar-heading'>
-    <h1>Great American Shooting Sports</h1>
+    <h1>G<span>reat </span>A<span>merican </span>S<span>hooting </span>S<span>ports</span></h1>
   </div>
 
 <button class='btn btn-book'
