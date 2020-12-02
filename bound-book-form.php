@@ -4,6 +4,7 @@
     include './View/navbar.php';
     include './Controller/db_conn.php';
     include './Model/query-bound-book.php';
+    include './Model/query-customer.php';
 
 ?>
 
@@ -94,58 +95,76 @@
       </form> -->
   <!-- Bound Book Input Form -->
 
-  <!-- Bound Book Table -->
-    <table style='table'>
-      <tr>
-        <th>Manufacturer</th>
-        <th>Importer</th>
-        <th>Model</th>
-        <th>Caliber</th>
-        <th>Action</th>
-        <th>Type</th>
-        <th>SerialNumber</th>
-      </tr>
+  <!-- Test Table -->
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100 ver3 m-b-110">
+            <div class="table100-head">
+              <table>
+                <thead>
+                  <tr class="row100 head">
+                    <th class="cell100 column1">Manufacturer</th>
+                    <th class="cell100 column2">Importer</th>
+                    <th class="cell100 column3">Model</th>
+                    <th class="cell100 column4">Caliber</th>
+                    <th class="cell100 column5">Action</th>
+                    <th class="cell100 column6">Type</th>
+                    <th class="cell100 column7">SerialNumber</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
 
-      <?php
-        $database = new Database();
-        $db = $database->connect();
+            <div class="table100-body js-pscroll">
+              <table>
+                <tbody>
+                  <?php
+                    $database = new Database();
+                    $db = $database->connect();
 
-        $product = new Gat($db);
-        $productGet = $product->gatRead();
-        while($row = $productGet->fetch(PDO::FETCH_ASSOC)){
-          //variables
-              $Manufacturer = $row['Manufacturer'];
-              $Importer = $row['Importer'];
-              $Model = $row['Model'];
-              $Caliber = $row['Caliber'];
-              $Action = $row['Action'];
-              $Type = $row['Type'];
-              $SerialNumber = $row['SerialNumber'];
-          //variables 
+                    $product = new Gat($db);
+                    $productGet = $product->gatRead();
+                    while($row = $productGet->fetch(PDO::FETCH_ASSOC)){
+                      //variables
+                          $Manufacturer = $row['Manufacturer'];
+                          $Importer = $row['Importer'];
+                          $Model = $row['Model'];
+                          $Caliber = $row['Caliber'];
+                          $Action = $row['Action'];
+                          $Type = $row['Type'];
+                          $SerialNumber = $row['SerialNumber'];
+                      //variables 
 
-          makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber);
-        }
+                      makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber);
+                    }
 
-        //print each row in view
-        function makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber){
-          echo "
-            <tr>
-              <td>{$Manufacturer}</td>
-              <td>{$Importer}</td>
-              <td>{$Model}</td>
-              <td>{$Caliber}</td>
-              <td>{$Action}</td>
-              <td>{$Type}</td>
-              <td>{$SerialNumber}</td>
-            </tr>
-          ";
-        }
-      
-      ?>
-    </table>
+                    //print each row in view
+                    function makeRow($Manufacturer, $Importer, $Model, $Caliber, $Action, $Type, $SerialNumber){
+                      echo "
+                        <tr class='row100 body'>
+                          <td class='cell100 column1'>{$Manufacturer}</td>
+                          <td class='cell100 column2'>{$Importer}</td>
+                          <td class='cell100 column3'>{$Model}</td>
+                          <td class='cell100 column4'>{$Caliber}</td>
+                          <td class='cell100 column5'>{$Action}</td>
+                          <td class='cell100 column6'>{$Type}</td>
+                          <td class='cell100 column7'>{$SerialNumber}</td>
+                        </tr>
+                      ";
+                    }
+                  
+                  ?>
 
 
-<!-- </div> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 <?php
 
